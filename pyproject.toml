@@ -1,0 +1,32 @@
+[project]
+name = "asr"
+version = "0.1.0"
+description = "Streaming ASR server — Nemotron + Silero VAD + Smart Turn v3"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "nemo_toolkit[asr]>=2.2.0",
+    "torch>=2.1.0",
+    "torchaudio>=2.1.0",
+    "numpy<2.0",
+    "soundfile",
+    "onnxruntime",
+    "silero-vad>=5.1",
+    "transformers>=4.40.0",
+    "huggingface-hub>=0.20.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.0",
+    "aiortc>=1.9.0",
+    "av>=12.0.0",
+]
+
+[project.scripts]
+asr-server = "asr.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.backends"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/asr"]

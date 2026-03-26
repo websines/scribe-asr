@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models / cache (downloaded at runtime)
+*.onnx
+*.nemo
+*.pt
+*.bin
+*.safetensors
+models/
+.cache/
+
+# Audio test files
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Logs
+*.log
+smart_turn_audio_log/
+
+# Secrets
+.env.local
+*.pem
+*.key
+.claude/
