@@ -12,7 +12,7 @@ import numpy as np
 import torch
 import nemo.collections.asr as nemo_asr
 from nemo.collections.asr.models import EncDecCTCModelBPE
-from nemo.collections.asr.parts.submodules.rnnt_greedy_decoding import Hypothesis
+from nemo.collections.asr.parts.utils.rnnt_utils import Hypothesis
 from omegaconf import open_dict
 
 from .config import settings
