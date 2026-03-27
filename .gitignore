@@ -47,3 +47,5 @@ smart_turn_audio_log/
 *.pem
 *.key
 .claude/
+
+/test.html

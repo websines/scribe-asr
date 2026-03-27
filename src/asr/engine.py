@@ -33,13 +33,8 @@ class ASREngine:
     """Loads Nemotron once. Creates lightweight sessions per connection."""
 
     def __init__(self):
-        # Cap VRAM
-        torch.cuda.set_per_process_memory_fraction(
-            gpu.vram_limit_gb / gpu.vram_total_gb, device=gpu.device
-        )
         self.device = torch.device(f"cuda:{gpu.device}")
-        log.info("VRAM capped at %.1f / %.1f GB on %s",
-                 gpu.vram_limit_gb, gpu.vram_total_gb, self.device)
+        log.info("Using device %s", self.device)
 
         # Load model
         log.info("Loading %s ...", cfg.model_name)
